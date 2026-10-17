@@ -155,23 +155,11 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"stock_sync.tasks.all"
-# 	],
-# 	"daily": [
-# 		"stock_sync.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"stock_sync.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"stock_sync.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"stock_sync.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"daily": [
+		"stock_sync.stock_sync.sync.enqueue_sync_stock_from_sql"
+	],
+}
 
 # Testing
 # -------
